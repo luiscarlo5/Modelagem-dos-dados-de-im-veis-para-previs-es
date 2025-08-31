@@ -94,21 +94,43 @@ Primeiro, foi treinado um modelo de **Regressão Linear** com todas as variávei
 Em seguida, aplicamos **feature selection**, usando apenas `median_income`, `housing_median_age` e `rooms_per_household`.  
 
 **Resultados:**  
--
--
+#### *Regressão Linear com todas as Features*
+- MAE: 44433.5801390594
+- MSE: 3589975718.382059
+- R²: 0.525610403430857
+
+#### *Regressão Linear com Features específicas*
+- MAE: 52757.85801554843
+- MSE: 4758976716.716653
+- R²: 0.37113528841843424
 
 ---
 
 ### 5.2 Árvore de Decisão para Regressão
 
-Foi implementada uma **Árvore de Decisão** para prever `median_house_value`.
+De forma análoga, foi treinado um modelo de **Árvore de Decisão** com todas as variáveis.  
+Em seguida, aplicamos **feature selection**, usando apenas `median_income`, `housing_median_age` e `rooms_per_household`.  
 
-**Comparação de Desempenho (MAE - Erro Médio Absoluto):**
+**Resultados:**  
+#### *Árvore de Decisão com todas as Features*
+- MAE: 38687.331589576526
+- MSE: 3112440491.8991985
+- R²: 0.5887132657368046
 
-| Modelo                 | MAE (Treinamento) | MAE (Teste) |
-|------------------------|-----------------|-------------|
-| Regressão Linear       | -----           | -----       |
-| Árvore de Decisão      | -----           | -----       |
+#### *Árvore de Decisão com Features específicas*
+- MAE: 54407.37088189962
+- MSE: 5130620480.623085
+- R²: 0.3220252249925827
+
+---
+
+**Comparação de Desempenho:**
+
+| Modelo                 |     MAE    |      MSE      |     R²    |
+|------------------------|------------|---------------|-----------|
+| Árvore de Decisão      |  38687.33  | 3112440491.89 |   0.588   |
+| Regressão Linear       |  44433.58  | 3589975718.38 |   0.525   |
+
 
 **Observações:**  
 - A Árvore de Decisão capturou melhor relações não lineares, apresentando MAE mais baixo no treinamento.  
@@ -116,16 +138,46 @@ Foi implementada uma **Árvore de Decisão** para prever `median_house_value`.
 
 ---
 
-## 6. Conclusão
+## 6. Resultados
 
-O projeto demonstrou que:
+![Resultados](resultados_arvore_regressao.png)
 
-- `median_income` é a variável mais influente no valor das casas.  
-- Outliers impactam significativamente modelos lineares e precisam ser tratados.  
-- Modelos lineares são simples e interpretáveis, mas Árvores de Decisão podem capturar padrões não lineares mais complexos.  
-- A análise exploratória e pré-processamento são essenciais para construir modelos robustos e precisos.
+------
+*Regressão Linear com todas as Features*
+- MAE: 44433.5801390594
+- MSE: 3589975718.382059
+- R²: 0.525610403430857
 
----
+*Regressão Linear com Features específicas*
+- MAE: 52757.85801554843
+- MSE: 4758976716.716653
+- R²: 0.37113528841843424
+------
 
-## 7. Estrutura do Projeto
+*Árvore de Decisão com todas as Features*
+- MAE: 38687.331589576526
+- MSE: 3112440491.8991985
+- R²: 0.5887132657368046
 
+*Árvore de Decisão com Features específicas*
+- MAE: 54407.37088189962
+- MSE: 5130620480.623085
+- R²: 0.3220252249925827
+------
+------
+
+### Regressão Linear
+O modelo de regressão linear desempenho bem ultrapassando a 0.5 com Coeficiente de Determinação R². No entanto, treinar o modelo apenas com as festures `median_income`, `housing_median_age`, e `total_rooms` ocasionou em resultados inferiores e isso é exposto tanto pelo próprio R² que diminui, quanto pelo MAE e MSE que aumentaram. Logo, é possível concluir que utilizar todas as features seja o caminho ideal para criação do modelo de Regresão Linear.
+
+------
+
+### Árvore de Decisão
+
+O modelo de Árvore de Decisão desempenhou também muito bem, pois ultrapassou 0.5 com Coeficiente de Determinação R² também. No entanto, semelhantemente ao regressor linear, treinar o modelo apenas com as festures `median_income`, `housing_median_age`, e `total_rooms` resultou em resultados inferiores e isso é visto tanto pelo R² menor, quanto pelo MAE e MSE maiores. Então, utilizar todas as features é também a melhor estratégia para o respectivo modelo.
+
+
+------
+### Comparação entre os modelos utilizados
+
+
+O modelo de Árvore de decisão foi bem superior que o modelo de Regressão Linear, e isso se deve pelo fato de que Árvores de Decisão dividem o espaço dos dados em regiões baseadas em divisões sucessivas. Logo, para dados que não possuem propriedades de linearidade e sim propriedades booleanas, como nas 5 novas colunas pós *One Hot Endonding*, o modelo de Árvore de Decisão acaba se encaixando melhor pois ele consegue interpretar melhor os dados de entrada dessas 5 colunas em específicos, apesar de que os dados de outras colunas também terem uma característica quase booleana que inclusive pode ser visto em gráficos de dipersão no início desse notebook.
