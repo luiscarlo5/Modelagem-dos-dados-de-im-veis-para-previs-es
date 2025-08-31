@@ -50,10 +50,11 @@ Foram plotados histogramas para visualizar a distribuição das variáveis numé
 ### 2.3 Boxplots e Outliers
 
 Boxplots foram utilizados para identificar outliers em `total_rooms`, `total_bedrooms`, `population	households`, `median_income` e em `median_house_value`
-**Antes de Tratamento de Outliers**
+
+**Antes de Tratamento de Outliers e de Dados Faltantes**
 ![Boxplot_1](boxplot_pre.png)
 
-**Pós Tratamento de Outliers**
+**Pós Tratamento de Outliers e de Dados Faltantes**
 ![Boxplot_2](boxplot.png)
 
 **Observações:**  
