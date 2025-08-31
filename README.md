@@ -25,7 +25,7 @@ O dataset contém valores faltantes, outliers e variáveis numéricas e categór
 
 Foi criado um gráfico de dispersão para explorar a relação entre `median_income` e `median_house_value`. Observa-se uma **correlação positiva clara**: regiões com maior renda mediana tendem a ter casas com valores mais altos, embora haja saturação para rendas muito elevadas.
 
-![Scatter Plot](images/scatter_plot.png)
+![Scatter Plot](scatter_plot.png)
 
 **Observações:**  
 - Existe uma tendência linear para a maioria dos dados, mas com alguns pontos extremos que indicam outliers.  
@@ -37,7 +37,7 @@ Foi criado um gráfico de dispersão para explorar a relação entre `median_inc
 
 Foram plotados histogramas para visualizar a distribuição das variáveis numéricas, especialmente `median_income` e `median_house_value`.
 
-![Histograma](images/histogram.png)
+![Histograma](histogram.png)
 
 **Observações:**  
 - `median_income` apresenta uma distribuição levemente assimétrica à direita.  
@@ -50,7 +50,7 @@ Foram plotados histogramas para visualizar a distribuição das variáveis numé
 
 Boxplots foram utilizados para identificar outliers em `total_rooms`, `total_bedrooms`, `population	households`, `median_income` e em `median_house_value`
 
-[Boxplot](images/boxplot.png)
+[Boxplot](boxplot.png)
 
 **Observações:**  
 - Valores extremamente altos em `median_income` e `median_house_value` foram identificados.  
