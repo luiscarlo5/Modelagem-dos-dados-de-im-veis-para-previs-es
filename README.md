@@ -38,6 +38,7 @@ Foi criado um gráfico de dispersão para explorar a relação entre `median_inc
 Foram plotados histogramas para visualizar a distribuição das variáveis numéricas, especialmente `median_income` e `median_house_value`.
 
 ![Histograma](histogram.png)
+- Veja que é notória uma correlação linear positiva e que essa correlção faz sentido na medida que em regiões mais ricas tendem a ter imóveis mais caros.
 
 **Observações:**  
 - `median_income` apresenta uma distribuição levemente assimétrica à direita.  
@@ -49,8 +50,11 @@ Foram plotados histogramas para visualizar a distribuição das variáveis numé
 ### 2.3 Boxplots e Outliers
 
 Boxplots foram utilizados para identificar outliers em `total_rooms`, `total_bedrooms`, `population	households`, `median_income` e em `median_house_value`
+**Antes de Tratamento de Outliers**
+![Boxplot_1](boxplot_pre.png)
 
-[Boxplot](boxplot.png)
+**Pós Tratamento de Outliers**
+![Boxplot_2](boxplot.png)
 
 **Observações:**  
 - Valores extremamente altos em `median_income` e `median_house_value` foram identificados.  
